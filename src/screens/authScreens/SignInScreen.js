@@ -1,11 +1,11 @@
 import React,{useState,useRef} from "react";
 import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity,TextInput} from "react-native";
-import { colors, parameters } from "../global/styles";
+import { colors, parameters } from "../../global/styles";
 import * as Animatable from 'react-native-animatable';
 
-import { Icon } from "react-native-elements";
+import { Icon,Button,SocialIcon } from "react-native-elements";
 import Header from "../../components/Header";
-import { title } from "../../global/styles";
+import {title} from "../../global/styles";
 
 
 export function SingInScreen(){
@@ -73,7 +73,50 @@ export function SingInScreen(){
                 </View>
             
             </View>
-            
+            <View style={{marginHorizontal:20, marginVertical:30}}>
+                    <Button
+                        title="Giriş Yap"
+                        buttonStyle ={parameters.styledButton}
+                        titleStyle ={parameters.buttonTitle}
+
+                    />
+            </View>
+            <View style={{alignItems:"center"}}>
+                <Text style={{...styles.text1,textDecorationLine:"underline"}}>Şifremi Unuttun ?</Text>
+            </View>
+            <View style={{alignItems:"center",marginTop:20,marginBottom:20}}>
+                <Text style={{fontSize:20,fontWeight:"bold"}}>Veya</Text>
+            </View>
+            <View>
+                <SocialIcon
+                    title="FaceBook ile Giriş Yap"  
+                    button   
+                    type="facebook"
+                    style={styles.SocialIcon} 
+                    onPress={()=>{}}          
+                />
+            </View>
+            <View>
+                <SocialIcon
+                    title="Google ile Giriş Yap"  
+                    button   
+                    type="google"
+                    style={styles.SocialIcon} 
+                    onPress={()=>{}}          
+                />
+            </View>
+            <View style={{marginTop:20,marginBottom:20,marginLeft:10}}>
+                <Text style={{fontSize:15}}>Hesap Oluşturmak</Text>
+                <Text style={{fontSize:15}}>  İster Misiniz ?</Text>
+            </View>
+            <View style={{alignItems:"flex-end",marginHorizontal:20}}>
+                    <Button
+                        title="Hesap Oluştur"
+                        buttonStyle ={parameters.createButton}
+                        titleStyle ={parameters.createButtonTitle}
+
+                    />
+            </View>
 
         </View>
     )
@@ -106,7 +149,10 @@ const styles =StyleSheet.create({
         alignContent: "center",
         alignItems: "center",
         paddingLeft:15,
+    },
+    SocialIcon :{
+        borderRadius:12,
+        height:50
     }
-    
    
 })

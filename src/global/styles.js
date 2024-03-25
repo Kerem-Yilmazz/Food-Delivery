@@ -13,6 +13,50 @@ export const colors ={
 
 export const parameters ={
   headerHeight :38 ,
+  
+  styledButton:{
+    backgroundColor: '#ff8c52',
+    alignContent: 'center',
+    justifyContent: 'center',
+    borderRadius: 12,
+    borderwidth: 1,
+    borderColor: '#ff8c52',
+    height: 50,
+    paddingHorizontal: 20,
+    width: '100%',
+  },
+  buttonTitle:{
+    color: 'white',
+    fontsize: 20,
+    fontweight: 'bold',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: -3,
+  },
+  SocialIcon: {
+    borderRadius:12,
+    height:50
+  },
+  createButton:{
+    backgroundColor:"white",
+    alignContent:"center",
+    justifyContent:"center",
+    borderRadius:12,
+    borderWidth:1,
+    borderColor:"#ff8c52",
+    height:40,
+    paddingHorizontal:20,
+    
+},
+  createButtonTitle:{
+    color:"#ff8c52",
+    fontSize:16,
+    fontWeight:"bold",
+    alignItems:"center",
+    justifyContent:"center",
+    marginTop:-3,
+  }
+  
 }
 
 export const title = {
