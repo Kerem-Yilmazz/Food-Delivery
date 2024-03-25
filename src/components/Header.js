@@ -1,44 +1,43 @@
 import React from "react";
-import { View,Text,StyleSheet,Dimensions,Image} from "react-native";
-import { colors,parameters } from "../global/styles";
-import {Icon} from "react-native-elements";
+import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity } from "react-native";
+import { colors, parameters } from "../global/styles";
 
 
+import { Icon } from "react-native-elements";
 
-
-
-
-export default function Header({title}){
-  return(
-
+export default function Header({ title }) {
+  return (
     <View style={styles.header}>
-      <View style={{marginLeft:20}}>
-        
-      <View style={{ flex: 1, alignItems: 'flex-start', justifyContent: 'flex-start' }}>
-      <Image
-        style={{ width: 30, height: 30 }}
-        source={require('../screens/solaok.png')}
-      />
-    </View>
+      <View style={{ marginLeft: 20 }}>
+        <TouchableOpacity
+          onPress={() => {
+            
+          }}
+          style={{ flex: 1, alignItems: "flex-start", justifyContent: "flex-start" }}
+        >
+          <Image
+            style={{ width: 30, height: 30}}
+            source={require("../screens/pngegg.png")}
+          />
+        </TouchableOpacity>
       </View>
       <View>
-          <Text style={styles.headerText}>{title}</Text>
-        </View>
+        <Text style={styles.headerText}>{title}</Text>
+      </View>
     </View>
-
-  ) 
-  
+  );
 }
-const styles =StyleSheet.create({
-  header:{
-    flexDirection:"row",
-    backgroundColor:colors.buttons,
-    height:parameters.headerHeight
+
+const styles = StyleSheet.create({
+  header: {
+    flexDirection: "row",
+    backgroundColor: colors.buttons,
+    height: parameters.headerHeight,
   },
-  headerText:{
-    color:colors.headerText,
-    fontSize:22,
-    fontWeight:"bold",
-    marginLeft:30
-  }
-})
+  headerText: {
+    color: colors.headerText,
+    fontSize: 22,
+    fontWeight: "bold",
+    marginLeft: 30,
+  },
+});

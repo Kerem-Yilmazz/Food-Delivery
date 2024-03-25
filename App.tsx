@@ -1,8 +1,9 @@
 import React from "react"
 
 import{View,Text,StyleSheet,StatusBar} from "react-native"
-import Header from "./src/components/Header"
+
 import {colors} from "./src/global/styles"
+import { SingInScreen } from "./src/screens/authScreens/SignInScreen"
 
 export default function App(){
   return(
@@ -10,8 +11,12 @@ export default function App(){
       <StatusBar
         barStyle= "light-content"
         backgroundColor = {colors.statusbar}
+        
         />
-      <Header title="Hesabım"/>
+        
+    <SingInScreen
+    
+    />  
 
       
     </View>
