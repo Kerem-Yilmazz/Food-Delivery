@@ -4,6 +4,7 @@ import{View,Text,StyleSheet,StatusBar} from "react-native"
 
 import {colors} from "./src/global/styles"
 import { SingInScreen } from "./src/screens/authScreens/SignInScreen"
+import SingInWelcomeScreen from "./src/screens/authScreens/SignInWelcomeScreen"
 
 export default function App(){
   return(
@@ -14,7 +15,7 @@ export default function App(){
         
         />
         
-    <SingInScreen
+    <SingInWelcomeScreen
     
     />  
 
