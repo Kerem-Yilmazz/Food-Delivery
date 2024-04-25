@@ -5,19 +5,20 @@ import { colors, parameters } from "../global/styles";
 
 import { Icon } from "react-native-elements";
 
-export default function Header({ title }) {
+export default function Header({ title,navigation}) {
   return (
     <View style={styles.header}>
       <View style={{ marginLeft: 20 }}>
-        <TouchableOpacity
+      <TouchableOpacity
           onPress={() => {
-            
+            navigation.goBack();
           }}
           style={{ flex: 1, alignItems: "flex-start", justifyContent: "flex-start" }}
         >
           <Image
             style={{ width: 30, height: 30}}
             source={require("../screens/pngegg.png")}
+            
           />
         </TouchableOpacity>
       </View>

@@ -7,9 +7,7 @@ export default function RootNavigator(){
     return(
         <NavigationContainer>
             <AuthStack
-                
             />
         </NavigationContainer>
     )
-
 }

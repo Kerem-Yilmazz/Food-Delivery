@@ -1,29 +1,46 @@
 import React from "react";
-import { createStackNavigator, TransitionPresets } from "@react-navigation/stack";
-import SignInWelcomeScreen from "../screens/authScreens/SignInWelcomeScreen";
-import  SignInScreen  from "../screens/authScreens/SignInScreen";
 
-const Auth = createStackNavigator();
+import {createStackNavigator,TransitionPresets} from "@react-navigation/stack"
+import SingInWelcomeScreen from "../screens/authScreens/SingInWelcomeScreen";
+import { SingInScreen } from "../screens/authScreens/SignInScreen";
+import HomeScreen from "../screens/HomeScreen";
 
-export default function AuthStack() {
-  return (
-    <Auth.Navigator>
-      <Auth.Screen
-        name="SignInWelcomeScreen"
-        component={SignInWelcomeScreen}
-        options={{
-          headerShown: false,
-          ...TransitionPresets.RevealFromBottomAndroid,
-        }}
-      />
-      <Auth.Screen
-        name="SignInScreen"
-        component={SignInScreen}
-        options={{
-          headerShown: false,
-          ...TransitionPresets.RevealFromBottomAndroid,
-        }}
-      />
-    </Auth.Navigator>
-  );
+const Auth =createStackNavigator();
+
+export default function AuthStack(){
+    return(
+        <Auth.Navigator>
+            <Auth.Screen
+                name="SingInWelcomeScreen"
+                component ={SingInWelcomeScreen}
+                options ={{
+                    headerShown: false,
+                    ...TransitionPresets.RevealFromBottomAndroid
+                }
+                    
+                }
+            />
+
+            <Auth.Screen
+                name="SingInScreen"
+                component ={SingInScreen}
+                options ={{
+                    headerShown: false,
+                    ...TransitionPresets.RevealFromBottomAndroid
+                }
+                    
+                }
+            />
+            <Auth.Screen
+                name="HomeScreen"
+                component ={HomeScreen}
+                options ={{
+                    headerShown: false,
+                    ...TransitionPresets.RevealFromBottomAndroid
+                }
+                    
+                }
+            />
+     </Auth.Navigator>
+    )
 }

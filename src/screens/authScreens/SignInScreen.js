@@ -8,7 +8,7 @@ import Header from "../../components/Header";
 import {title} from "../../global/styles";
 
 
-export function SingInScreen(){
+export function SingInScreen({navigation}){
 
     const[textInput2Foussued,setTextInput2Fossued]=useState(false)
     const textInput1 =useRef(1)
@@ -16,7 +16,7 @@ export function SingInScreen(){
 
     return(
         <View styles = {styles.container}>
-            <Header title="Hesabım"/>
+            <Header title="Hesabım" navigation={navigation}/>
 
             <View style ={{marginLeft:20, marginTop:10}}>
                 <Text style={title}>Giriş Yap</Text>
@@ -78,7 +78,7 @@ export function SingInScreen(){
                         title="Giriş Yap"
                         buttonStyle ={parameters.styledButton}
                         titleStyle ={parameters.buttonTitle}
-
+                            onPress={()=>{navigation.navigate("HomeScreen")}}
                     />
             </View>
             <View style={{alignItems:"center"}}>

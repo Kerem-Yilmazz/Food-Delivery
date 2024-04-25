@@ -4,7 +4,10 @@ import{View,Text,StyleSheet,StatusBar} from "react-native"
 
 import {colors} from "./src/global/styles"
 import { SingInScreen } from "./src/screens/authScreens/SignInScreen"
-import SingInWelcomeScreen from "./src/screens/authScreens/SignInWelcomeScreen"
+import SingInWelcomeScreen from "./src/screens/authScreens/SingInWelcomeScreen"
+import RootNavigator from "./src/navigation/RootNavigator"
+
+
 
 export default function App(){
   return(
@@ -15,9 +18,7 @@ export default function App(){
         
         />
         
-    <SingInWelcomeScreen
-    
-    />  
+          <RootNavigator/>
 
       
     </View>
